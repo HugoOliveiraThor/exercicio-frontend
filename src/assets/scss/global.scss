@@ -1,0 +1,47 @@
+@import "./_variables.scss";
+@import "./paddings";
+@import "./_fonts.scss";
+@import "./_mixins.scss";
+@import "./shared";
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  background:$background-default;
+  color:#FFF;
+  font-family: $font-family;
+  .row {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    @include main-title;
+    @include phone {
+      justify-content: center;
+
+      &.no-center {
+        justify-content: space-between;
+      }
+    }
+  }
+  .column  {
+    @include default-column;
+    @include desktop {
+      flex:1;
+    }
+  }
+  .double-column {
+    @include default-column;
+    @include desktop {
+      flex:2;
+    }
+    @include phone {
+      align-items: center;
+    }
+  }
+}
+
