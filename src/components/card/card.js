@@ -18,5 +18,5 @@ Card.propTypes = {
 
 Card.defaultProps = {
   title: '',
-  children: '',
+  children: React.createElement('div'),
 };
