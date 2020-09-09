@@ -3,7 +3,7 @@ import { FaRegEdit } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { Wrapper } from './styles';
 
-function LinkIcon({ label }) {
+export default function LinkIcon({ label }) {
   return (
     <Wrapper>
       <FaRegEdit color="green" size="0.4em" />
@@ -19,5 +19,3 @@ LinkIcon.propTypes = {
 LinkIcon.defaultProps = {
   label: '',
 };
-
-export default LinkIcon;

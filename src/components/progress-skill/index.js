@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function ProgressSkills({ label, percentage }) {
   function defineSkills(perc) {
@@ -20,3 +21,13 @@ export default function ProgressSkills({ label, percentage }) {
     </div>
   );
 }
+
+ProgressSkills.propTypes = {
+  label: PropTypes.string,
+  percentage: PropTypes.number,
+};
+
+ProgressSkills.defaultProps = {
+  label: '',
+  percentage: 0,
+};
