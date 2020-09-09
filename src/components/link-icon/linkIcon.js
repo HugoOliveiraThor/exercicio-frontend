@@ -1,12 +1,23 @@
-import React from "react";
-import { FaRegEdit } from "react-icons/fa";
-import { Wrapper } from './styles'
+import React from 'react';
+import { FaRegEdit } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import { Wrapper } from './styles';
 
-export default function linkIcon({ label, handleClick }) {
+function LinkIcon({ label }) {
   return (
     <Wrapper>
       <FaRegEdit color="green" size="0.4em" />
-      <span onClick={handleClick}>{label}</span>
+      <span>{label}</span>
     </Wrapper>
   );
 }
+
+LinkIcon.propTypes = {
+  label: PropTypes.string,
+};
+
+LinkIcon.defaultProps = {
+  label: '',
+};
+
+export default LinkIcon;
