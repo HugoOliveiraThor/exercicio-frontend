@@ -52,7 +52,7 @@ body {
 }
 .section-title {
   @include section-title;
-  color:'#4c5561';
+  color:$grey;
   padding-bottom:10px;
 }
 
